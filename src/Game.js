@@ -1,7 +1,22 @@
 export const dotcom = {
     setup: () => ({}),
 
-    moves: {
-        
+    phases: {
+        roll: {
+            moves: { Roll }
+        },
+        move: {
+            moves: {
+                Move, 
+                Buy, 
+                Sell
+            }
+        },
+        trade: {
+            moves: {
+                Trade
+            }
+        }
     }
+
 };
