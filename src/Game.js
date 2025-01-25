@@ -3,36 +3,38 @@ import { TurnOrder } from 'boardgame.io/core'
 export const dotcom = {
     setup: () => ({}),
 
-    ctx: {
-        
+    moves: {
+        roll: ({ G, ctx, random }) => {
+            const die = random.Die(6);
+        },
     },
 
     turn: {
         order: TurnOrder.ONCE,
         stages: {
             roll: {
-                moves: { Roll }
+                moves: { roll }
             },
             move: {
                 moves: {
-                    Move, 
-                    Buy, 
-                    Sell
+                    move,
+                    buy, 
+                    sell
                 }
             },
             trade: {
                 moves: {
-                    Trade
+                    trade
                 }
             }
         }
     },
 
     phases: {
-        setup: { Setup },
+        setup: { setup },
         play: {
             moves: {
-                Roll, Move, Buy, Sell, Trade
+                roll, move, buy, sell, trade
             }
         }
     },
