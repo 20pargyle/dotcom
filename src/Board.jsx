@@ -5,6 +5,10 @@ export function Board() {
 
 
     return (
-        <Sidebar playerID={"Steve"} />
+        <div> 
+            <Sidebar phase={phase} />
+            <div id="graph"></div>
+        </div>
+
     )
 }

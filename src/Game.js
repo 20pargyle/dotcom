@@ -1,7 +1,14 @@
 import { TurnOrder } from 'boardgame.io/core'
+import { Player } from './Player'
 
 export const dotcom = {
-    setup: () => ({}),
+    setup: () => ({ 
+        players: initPlayers(),
+    }),
+
+    G: {
+        
+    },
 
     moves: {
         roll: ({ G, ctx, random }) => {
@@ -40,3 +47,17 @@ export const dotcom = {
     },
 
 };
+
+function initPlayers(playerCount){
+    let players = [];
+    for (let i = 0; i < playerCount; i++) {
+        players[i] = new Player(i);
+    }
+    return players;
+}
+
+function timestep(playerList){
+    playerList.forEach(player => {
+        true;
+    });
+}
